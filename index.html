@@ -83,8 +83,8 @@
 
 <div id="conteudo"></div>
 
-<script defer>
-function verificar() {
+<script>
+window.verificar = function() {
   var s = document.getElementById('senha').value;
   if (s === 'leite2026') {
     document.getElementById('tela-senha').style.display = 'none';
