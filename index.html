@@ -84,8 +84,9 @@
 <div id="conteudo"></div>
 
 <script>
-window.verificar = function() {
+function verificar() {
   var s = document.getElementById('senha').value;
+
   if (s === 'leite2026') {
     document.getElementById('tela-senha').style.display = 'none';
     document.getElementById('conteudo').style.display = 'block';
@@ -96,6 +97,7 @@ window.verificar = function() {
     document.getElementById('senha').focus();
   }
 }
+
 
 function carregarGuia() {
   var conteudo = document.getElementById('conteudo');
