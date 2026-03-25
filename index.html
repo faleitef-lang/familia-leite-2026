@@ -62,41 +62,15 @@
     color: rgba(255,255,255,0.25); font-size: 0.75em;
     margin-top: 20px;
   }
-  #conteudo { display: none; }
+  #conteudo { display: block; }
 </style>
 </head>
 <body>
 
-<div id="tela-senha">
-  <div class="flag-row">🇦🇹 🇭🇺 🇸🇰</div>
-  <div class="titulo">Família Leite<br><em>Europa 2026</em></div>
-  <div class="subtitulo">18 a 31 de maio de 2026 ✈️</div>
-  <div class="senha-box">
-    <div class="senha-label">🔒 Acesso exclusivo</div>
-    <input type="password" class="senha-input" id="senha" placeholder="••••••••••" 
-           onkeypress="if(event.key==='Enter') verificar()">
-    <button class="senha-btn" onclick="verificar()">ENTRAR →</button>
-    <div class="senha-erro" id="erro">❌ Senha incorreta. Tente novamente!</div>
-    <div class="senha-dica">Acesso exclusivo Família Leite 💙</div>
-  </div>
-</div>
-
 <div id="conteudo"></div>
 
 <script>
-function verificar() {
-  var s = document.getElementById('senha').value;
 
-  if (s === 'leite2026') {
-    document.getElementById('tela-senha').style.display = 'none';
-    document.getElementById('conteudo').style.display = 'block';
-    carregarGuia();
-  } else {
-    document.getElementById('erro').style.display = 'block';
-    document.getElementById('senha').value = '';
-    document.getElementById('senha').focus();
-  }
-}
 
 
 function carregarGuia() {
